@@ -1,16 +1,16 @@
 <?php
 /**
- * Consulta a Padrón Alcance 5 (ws_sr_padron_a5)
+ * Consulta a Padrón Alcance 4 (ws_sr_padron_a4)
  *
- * @link http://www.afip.gob.ar/ws/ws_sr_padron_a5/manual_ws_sr_padron_a5_v1.0.pdf WS Especificación
+ * @link http://www.afip.gob.ar/ws/ws_sr_padron_a4/manual_ws_sr_padron_a4_v1.1.pdf WS Especificación
  *
  **/
 
-namespace SIU\Afip\WebService;
+namespace patosmack\Afip\WebService;
 
-use SIU\Afip\WebService\AfipWebService;
+use patosmack\Afip\WebService\AfipWebService;
 
-class PadronAlcanceCinco extends AfipWebService
+class PadronAlcanceCuatro extends AfipWebService
 {
     public function __construct($afip)
     {
@@ -22,10 +22,10 @@ class PadronAlcanceCinco extends AfipWebService
     public function setConfig()
     {
         $this->setSoapVersion(SOAP_1_1);
-        $this->setWSDL('ws_sr_padron_a5-production.wsdl');
-        $this->setUrl('https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA5');
-        $this->setWSDLTest('ws_sr_padron_a5.wsdl');
-        $this->setUrlTest('https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA5');
+        $this->setWSDL('ws_sr_padron_a4-production.wsdl');
+        $this->setUrl('https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA4');
+        $this->setWSDLTest('ws_sr_padron_a4.wsdl');
+        $this->setUrlTest('https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA4');
     }
 
     /**
@@ -43,20 +43,20 @@ class PadronAlcanceCinco extends AfipWebService
     }
 
     /**
-      * Obtiene del servicio web los detalles del contribuyente {@see WS
-      * Especificación item 3.2}
-      *
-      * @throws Excepción si existe un error en respuesta
-      *
-      * @return object|null si el contribuyente no existe, return null,
-      * si existe, returns persona propiedad de la respuesta {@see
-      * WS Especificación item 3.2.2}
-     **/
+     * Obtiene del servicio web los detalles del contribuyente {@see WS
+     * Especificación item 3.2}
+     *
+     * @throws Excepción si existe un error en respuesta
+     *
+     * @return object|null si el contribuyente no existe, return null,
+     * si existe, returns persona propiedad de la respuesta {@see
+     * WS Especificación item 3.2.2}
+    **/
     public function getContribuyenteDetalle($id)
     {
         $afip = $this->getAfip();
-        
-        $ta = $afip->getServiceTA('ws_sr_padron_a5');
+
+        $ta = $afip->getServiceTA('ws_sr_padron_a4');
         
         $params = array(
             'token'             => $ta->getToken(),
@@ -66,7 +66,7 @@ class PadronAlcanceCinco extends AfipWebService
         );
 
         try {
-            return $this->ejecutar('getPersona', $params);
+            return $this->ejecutar('getPersona', $params)->persona;
         } catch (\Exception $e) {
             if (strpos($e->getMessage(), 'No existe') !== false) {
                 return null;

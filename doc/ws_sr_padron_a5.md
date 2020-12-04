@@ -9,7 +9,7 @@ La documentación de AFIP de este Web Service se encuentra disponible en [Manual
 <?php
     $cuit = "20221064233";
         
-    $padron_cinco = new \SIU\Afip\WebService\PadronAlcanceCinco($this->afip);
+    $padron_cinco = new \patosmack\Afip\WebService\PadronAlcanceCinco($this->afip);
         
     $result = $padron_cinco->getContribuyenteDetalle($cuit);
 ```
@@ -17,7 +17,7 @@ La documentación de AFIP de este Web Service se encuentra disponible en [Manual
 #### Obtener estado del servidor
 ```php
 <?php
-    $padron_cinco = new \SIU\Afip\WebService\PadronAlcanceCinco($this->afip);
+    $padron_cinco = new \patosmack\Afip\WebService\PadronAlcanceCinco($this->afip);
         
     $result = $padron_cinco->getEstadoServicio();
 ```

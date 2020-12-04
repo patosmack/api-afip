@@ -19,7 +19,7 @@
 
     <filter>
         <whitelist>
-            <directory>./src/SIU/AraiJsonParser/</directory>
+            <directory>./src/patosmack/AraiJsonParser/</directory>
         </whitelist>
     </filter>
 </phpunit>

@@ -7,7 +7,7 @@ La documentación de AFIP de este Web Service se encuentra disponible en [Manual
 #### Obtener datos de un contribuyente
 ```php
 <?php
-    $ganancias_envio = new \SIU\Afip\WebService\FormularioAnualGanancias($this->s__afip);
+    $ganancias_envio = new \patosmack\Afip\WebService\FormularioAnualGanancias($this->s__afip);
 
 	$datos_enviar = array(	'fileName' => 'F1357.MD5_ARCHIVO.gz" ,
 							'presentacionDataHandler' => file_get_contents($archivo)
@@ -19,7 +19,7 @@ La documentación de AFIP de este Web Service se encuentra disponible en [Manual
 #### Obtener estado del servidor
 ```php
 <?php
-    $form_afip = new \SIU\Afip\WebService\FormularioAnualGanancias($this->s__afip);
+    $form_afip = new \patosmack\Afip\WebService\FormularioAnualGanancias($this->s__afip);
 
 	$result = $form_afip->getEstadoServicio();
 ```

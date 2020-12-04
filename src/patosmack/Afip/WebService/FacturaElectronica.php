@@ -6,9 +6,9 @@
  *
  **/
 
-namespace SIU\Afip\WebService;
+namespace patosmack\Afip\WebService;
 
-use SIU\Afip\WebService\AfipWebService;
+use patosmack\Afip\WebService\AfipWebService;
 
 class FacturaElectronica extends AfipWebService
 {

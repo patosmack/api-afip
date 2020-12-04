@@ -9,7 +9,7 @@ La documentación de AFIP de este Web Service se encuentra disponible en [Manual
 <?php
     $cuit = "20221064233";
         
-    $padron_diez = new \SIU\Afip\WebService\PadronAlcanceDiez($this->afip);
+    $padron_diez = new \patosmack\Afip\WebService\PadronAlcanceDiez($this->afip);
         
     $result = $padron_diez->getContribuyenteDetalle($cuit);
 ```
@@ -17,7 +17,7 @@ La documentación de AFIP de este Web Service se encuentra disponible en [Manual
 #### Obtener estado del servidor
 ```php
 <?php
-    $padron_diez = new \SIU\Afip\WebService\PadronAlcanceDiez($this->afip);
+    $padron_diez = new \patosmack\Afip\WebService\PadronAlcanceDiez($this->afip);
         
     $result = $padron_diez->getEstadoServicio();
 ```

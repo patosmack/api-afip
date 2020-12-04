@@ -6,9 +6,9 @@
  *
  **/
 
-namespace SIU\Afip\WebService;
+namespace patosmack\Afip\WebService;
 
-use SIU\Afip\WebService\AfipWebService;
+use patosmack\Afip\WebService\AfipWebService;
 
 class FormularioAnualGanancias extends AfipWebService
 {
@@ -62,7 +62,7 @@ class FormularioAnualGanancias extends AfipWebService
     }
 
     /**
-     * Hacer parametros de solicitud por defecto para la mayori­a de las operaciones
+     * Hacer parametros de solicitud por defecto para la mayoriï¿½a de las operaciones
      *
      * @param string $operation Operacion SOAP para hacer
      *
@@ -112,7 +112,7 @@ class FormularioAnualGanancias extends AfipWebService
     /**
      * Envio de datos del TXT de para ian incorporacion a los registros de afip
      *
-     * Envi­a a los servidores de AFIP los datos de los agentes para la generacion 
+     * Enviï¿½a a los servidores de AFIP los datos de los agentes para la generacion 
      * del formulario anual de ganancias
      *
      * @param array $data Parametros del envio 

@@ -1,16 +1,16 @@
 <?php
 /**
- * Consulta a Padrón Alcance 4 (ws_sr_padron_a4)
+ * Consulta a Padrón Alcance 10 (ws_sr_padron_a10)
  *
- * @link http://www.afip.gob.ar/ws/ws_sr_padron_a4/manual_ws_sr_padron_a4_v1.1.pdf WS Especificación
+ * @link http://www.afip.gob.ar/ws/ws_sr_padron_a10/manual_ws_sr_padron_a10_v1.1.pdf WS Especificación
  *
  **/
 
-namespace SIU\Afip\WebService;
+namespace patosmack\Afip\WebService;
 
-use SIU\Afip\WebService\AfipWebService;
+use patosmack\Afip\WebService\AfipWebService;
 
-class PadronAlcanceCuatro extends AfipWebService
+class PadronAlcanceDiez extends AfipWebService
 {
     public function __construct($afip)
     {
@@ -22,20 +22,20 @@ class PadronAlcanceCuatro extends AfipWebService
     public function setConfig()
     {
         $this->setSoapVersion(SOAP_1_1);
-        $this->setWSDL('ws_sr_padron_a4-production.wsdl');
-        $this->setUrl('https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA4');
-        $this->setWSDLTest('ws_sr_padron_a4.wsdl');
-        $this->setUrlTest('https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA4');
+        $this->setWSDL('ws_sr_padron_a10-production.wsdl');
+        $this->setUrl('https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA10');
+        $this->setWSDLTest('ws_sr_padron_a10.wsdl');
+        $this->setUrlTest('https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA10');
     }
 
     /**
-     *  Verifica el estado y la disponibilidad de los elementos principales del servicio
-     *  (aplicación, autenticación y base de datos).
-     *  {@see WS Especificación item 3.1}
-     *
-     * @return object { appserver => Web Service status,
-     * dbserver => Database status, authserver => Autentication
-     * server status}
+    *  Verifica el estado y la disponibilidad de los elementos principales del servicio
+    *  (aplicación, autenticación y base de datos).
+    *  {@see WS Especificación item 3.1}
+    *
+    * @return object { appserver => Web Service status,
+    * dbserver => Database status, authserver => Autentication
+    * server status}
     **/
     public function getEstadoServicio()
     {

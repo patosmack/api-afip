@@ -9,7 +9,7 @@ Para el desarrollo de esta librería se toma como referencia el código fuente d
 ## Instalación
 La instalación se hace a través de Composer
 ```
-composer require siu/api-afip
+composer require patosmack/api-afip
 ```
 ## Uso
 
@@ -28,7 +28,7 @@ Para obtener información de como obtener el certificado y la key para utilizar 
         'token_dir' => '/user/local/token_dir/'
     ];
 
-    $this->afip = new \SIU\Afip\Afip($config);
+    $this->afip = new \patosmack\Afip\Afip($config);
 ```
 
 ##### Parámetros de configuración disponibles: 

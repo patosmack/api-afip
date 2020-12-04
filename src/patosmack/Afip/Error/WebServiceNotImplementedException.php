@@ -1,6 +1,6 @@
 <?php
 
-namespace SIU\Afip\Error;
+namespace patosmack\Afip\Error;
 
 class WebServiceNotImplementedException extends CustomException
 {

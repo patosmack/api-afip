@@ -1,9 +1,9 @@
 <?php
 
-namespace SIU\Afip\WebService;
+namespace patosmack\Afip\WebService;
 
-use SIU\Afip\Error\ConfigurationErrorException;
-use SIU\Afip\Error\RuntimeErrorException;
+use patosmack\Afip\Error\ConfigurationErrorException;
+use patosmack\Afip\Error\RuntimeErrorException;
 
 abstract class AfipWebService
 {

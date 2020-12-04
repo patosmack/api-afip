@@ -1,5 +1,5 @@
 <?php
-namespace SIU\Afip\Test;
+namespace patosmack\Afip\Test;
 
 use PHPUnit\Framework\TestCase;
 
@@ -17,12 +17,12 @@ class AfipTest extends TestCase
             'token_dir' => '/user/local/xml/',
         ];
 
-        $this->afip = new \SIU\Afip\Afip($config);
+        $this->afip = new \patosmack\Afip\Afip($config);
     }
 
     public function testGetEstadoServicio()
     {
-        $padron_a4 = new \SIU\Afip\WebService\PadronAlcanceCuatro($this->afip);
+        $padron_a4 = new \patosmack\Afip\WebService\PadronAlcanceCuatro($this->afip);
         
         $result = $padron_a4->getEstadoServicio();
 
@@ -35,7 +35,7 @@ class AfipTest extends TestCase
     {
         $cuit = "20002307554";
         
-        $padron_a4 = new \SIU\Afip\WebService\PadronAlcanceCuatro($this->afip);
+        $padron_a4 = new \patosmack\Afip\WebService\PadronAlcanceCuatro($this->afip);
         
         $result = $padron_a4->getContribuyenteDetalle($cuit);
 

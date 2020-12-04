@@ -1,12 +1,12 @@
 <?php
 
-namespace SIU\Afip;
+namespace patosmack\Afip;
 
-use SIU\Afip\TokenAutorization;
-use SIU\Afip\Error\WebServiceNotImplementedException;
-use SIU\Afip\Error\ConfigurationErrorException;
-use SIU\Afip\Error\RuntimeErrorException;
-use SIU\Afip\Error\ApplicationNotFoundException;
+use patosmack\Afip\TokenAutorization;
+use patosmack\Afip\Error\WebServiceNotImplementedException;
+use patosmack\Afip\Error\ConfigurationErrorException;
+use patosmack\Afip\Error\RuntimeErrorException;
+use patosmack\Afip\Error\ApplicationNotFoundException;
 
 class Afip
 {

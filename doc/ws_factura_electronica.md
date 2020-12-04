@@ -5,7 +5,7 @@ La especificación de este Web Service se encuentra disponible en [Facturación 
 #### Obtener número del último comprobante creado
 ```php
 <?php
-    $factura_electronica = new \SIU\Afip\WebService\FacturaElectronica($this->afip);
+    $factura_electronica = new \patosmack\Afip\WebService\FacturaElectronica($this->afip);
         
     $punto_venta = 1;
     $tipo_comprobante = 5;
@@ -17,7 +17,7 @@ La especificación de este Web Service se encuentra disponible en [Facturación 
 
 ```php
 <?php
-    $factura_electronica = new \SIU\Afip\WebService\FacturaElectronica($this->afip);
+    $factura_electronica = new \patosmack\Afip\WebService\FacturaElectronica($this->afip);
         
     $data = array(
 		'CantReg' 	=> 1,  // Cantidad de comprobantes a registrar
@@ -56,7 +56,7 @@ La especificación de este Web Service se encuentra disponible en [Facturación 
 #### Crear y asignar CAE a siguiente comprobante
 ```php
 <?php
-    $factura_electronica = new \SIU\Afip\WebService\FacturaElectronica($this->afip);
+    $factura_electronica = new \patosmack\Afip\WebService\FacturaElectronica($this->afip);
 
 	$result = $factura_electronica->crearProximoComprobante($data);     
 
@@ -69,7 +69,7 @@ La especificación de este Web Service se encuentra disponible en [Facturación 
 #### Obtener información de un comprobante
 ```php
 <?php
-    $factura_electronica = new \SIU\Afip\WebService\FacturaElectronica($this->afip);
+    $factura_electronica = new \patosmack\Afip\WebService\FacturaElectronica($this->afip);
 
     $punto_venta = 1;
     $tipo_comprobante = 5;
@@ -81,7 +81,7 @@ La especificación de este Web Service se encuentra disponible en [Facturación 
 #### Obtener tipos de comprobantes disponibles
 ```php
 <?php
-    $factura_electronica = new \SIU\Afip\WebService\FacturaElectronica($this->afip);
+    $factura_electronica = new \patosmack\Afip\WebService\FacturaElectronica($this->afip);
 
 	$result = $factura_electronica->getTiposCbte();     
 ```
@@ -89,7 +89,7 @@ La especificación de este Web Service se encuentra disponible en [Facturación 
 #### Obtener tipos de conceptos disponibles
 ```php
 <?php
-    $factura_electronica = new \SIU\Afip\WebService\FacturaElectronica($this->afip);
+    $factura_electronica = new \patosmack\Afip\WebService\FacturaElectronica($this->afip);
 
 	$result = $factura_electronica->getTiposConcepto();     
 ```
@@ -97,7 +97,7 @@ La especificación de este Web Service se encuentra disponible en [Facturación 
 #### Obtener tipos de documentos disponibles
 ```php
 <?php
-    $factura_electronica = new \SIU\Afip\WebService\FacturaElectronica($this->afip);
+    $factura_electronica = new \patosmack\Afip\WebService\FacturaElectronica($this->afip);
 
 	$result = $factura_electronica->getTiposDoc();     
 ```
@@ -105,7 +105,7 @@ La especificación de este Web Service se encuentra disponible en [Facturación 
 #### Obtener tipos de alícuotas disponibles
 ```php
 <?php
-    $factura_electronica = new \SIU\Afip\WebService\FacturaElectronica($this->afip);
+    $factura_electronica = new \patosmack\Afip\WebService\FacturaElectronica($this->afip);
 
 	$result = $factura_electronica->getTiposAlicuotas();     
 ```
@@ -113,7 +113,7 @@ La especificación de este Web Service se encuentra disponible en [Facturación 
 #### Obtener tipos de monedas disponibles
 ```php
 <?php
-    $factura_electronica = new \SIU\Afip\WebService\FacturaElectronica($this->afip);
+    $factura_electronica = new \patosmack\Afip\WebService\FacturaElectronica($this->afip);
 
 	$result = $factura_electronica->getTiposMonedas();     
 ```
@@ -121,7 +121,7 @@ La especificación de este Web Service se encuentra disponible en [Facturación 
 #### Obtener tipos de opciones disponibles para el comprobante
 ```php
 <?php
-    $factura_electronica = new \SIU\Afip\WebService\FacturaElectronica($this->afip);
+    $factura_electronica = new \patosmack\Afip\WebService\FacturaElectronica($this->afip);
 
 	$result = $factura_electronica->getTiposOpcional();     
 ```
@@ -129,7 +129,7 @@ La especificación de este Web Service se encuentra disponible en [Facturación 
 #### Obtener tipos de tributos disponibles
 ```php
 <?php
-    $factura_electronica = new \SIU\Afip\WebService\FacturaElectronica($this->afip);
+    $factura_electronica = new \patosmack\Afip\WebService\FacturaElectronica($this->afip);
 
 	$result = $factura_electronica->getTiposTributos();     
 ```
@@ -137,7 +137,7 @@ La especificación de este Web Service se encuentra disponible en [Facturación 
 #### Transformar formato de fecha que utiliza AFIP (yyyymmdd) a yyyy-mm-dd
 ```php
 <?php
-    $factura_electronica = new \SIU\Afip\WebService\FacturaElectronica($this->afip);
+    $factura_electronica = new \patosmack\Afip\WebService\FacturaElectronica($this->afip);
 
 	$result = $factura_electronica->formatDate('19970508'); //Nos devuelve 1997-05-08    
 ```
@@ -145,7 +145,7 @@ La especificación de este Web Service se encuentra disponible en [Facturación 
 #### Obtener estado del servidor
 ```php
 <?php
-    $factura_electronica = new \SIU\Afip\WebService\FacturaElectronica($this->afip);
+    $factura_electronica = new \patosmack\Afip\WebService\FacturaElectronica($this->afip);
         
     $result = $factura_electronica->getEstadoServicio();
 ```

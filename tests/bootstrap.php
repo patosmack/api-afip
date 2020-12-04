@@ -6,4 +6,4 @@ if (file_exists(__DIR__.'/../vendor/autoload.php')) { // standalone
     $loader = require __DIR__.'/../../../autoload.php';
 }
 
-$loader->add('SIU\Afip\Test', __DIR__);
+$loader->add('patosmack\Afip\Test', __DIR__);

@@ -1,6 +1,6 @@
 <?php
 
-namespace SIU\Afip;
+namespace patosmack\Afip;
 
 class TokenAutorization
 {

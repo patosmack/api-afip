@@ -11,7 +11,7 @@ Datos para pruebas en el ambiente de testing [Datos Prueba](http://www.afip.gob.
 <?php
     $cuit = "20221064233";
         
-    $padron_cuatro = new \SIU\Afip\WebService\PadronAlcanceCuatro($this->afip);
+    $padron_cuatro = new \patosmack\Afip\WebService\PadronAlcanceCuatro($this->afip);
         
     $result = $padron_cuatro->getContribuyenteDetalle($cuit);
 ```
@@ -19,7 +19,7 @@ Datos para pruebas en el ambiente de testing [Datos Prueba](http://www.afip.gob.
 #### Obtener estado del servidor
 ```php
 <?php
-    $padron_cuatro = new \SIU\Afip\WebService\PadronAlcanceCuatro($this->afip);
+    $padron_cuatro = new \patosmack\Afip\WebService\PadronAlcanceCuatro($this->afip);
         
     $result = $padron_cuatro->getEstadoServicio();
 ```
